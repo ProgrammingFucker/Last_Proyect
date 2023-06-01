@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="../img/icono.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../js/bootstrap.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center h-50 bg-info">
+            <form id="login" style="padding:1rem;" class="bg-info">
+
+                <div class="col-12 user-img">
+                    <img src="../img/Fondo.jpg">
+                </div>
+                <center>
+                    <h1>LOGIN</h1>
+                </center>
+                <br>
+                <div>
+                    <label for="usuario">
+                        <h4>Usuario</h4>
+                    </label>
+
+                    <input type="text" class="form-control" id="usuario">
+                </div>
+                <br>
+                <div>
+                    <label for="clave1">
+                        <h4>Clave</h4>
+                    </label>
+                    <br>
+                    <input type="password" class="form-control" id="clave">
+                </div>
+                <br>
+                <div>
+                    <center><input id="signup_btn" type="submit" value="Login"></center>
+                    <button><a href="../html/register.html"</button>
+
+
+                </div>
+                <br>
+
+            </form>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            <script>
+                $("#login").submit(function () {
+                    var user = $("#usuario").val();
+                    var pass = $("#clave").val();
+
+                    var comprobaruser = localStorage.getItem("username");
+                    var comprobarcontra = localStorage.getItem("contraseña");
+
+                    if (user == comprobaruser)
+                    if (pass == comprobarcontra) {
+                        alert("Logeado")
+                    }
+                    else {
+                        alert("Usuario o Contraseña Incorrecta");
+                    }
+
+                });
+
+                        
+
+            </script>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container">
+        <footer class="bg-light text-center text-lg-start">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                JSaumeth© 2022 Copyright:
+                <a class="text-dark" href="">Artemorfago</a>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+</body>
+
+</html>

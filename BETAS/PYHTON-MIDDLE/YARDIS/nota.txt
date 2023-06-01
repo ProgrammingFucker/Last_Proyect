@@ -1,0 +1,25 @@
+reguntar:
+    - Sexo.
+    - Edad.
+
+def sexo(sexo):
+    if sexo =  'Masculino':
+        print(f"Un placer caballero {USERNAME}")
+
+    else:
+        print(f"Un gusto conocerla, {USENAME}. Que bella se ve hoy")
+
+
+def nombre():
+"""Se puede hacer un import de un json con nombre de chicos y chicas,
+    no sé si hacerlo aún como vector, o cun json normal"""
+
+"""tengo que ver cómo hago un import list, para realizar
+    el llamado y posteriormente haga el condicional si 
+    es honbre o mujer por el nombre, "Saviendo tanta
+    diversidad de generos", sería muy buena opción"""
+
+    si nombre == 'chico' Lista de nombre de chicos
+        pasa a ser hombre
+
+    else: es mujer

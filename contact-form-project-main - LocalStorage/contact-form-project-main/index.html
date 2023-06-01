@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <form id="form">
+        <h1>Please Contact me</h1>
+        <div>
+            <label>Name</label></br>
+            <input id="name" name="name">
+        </div>
+        <div>
+            <label>Email</label><br>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label>Message</label><br>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <div id="buttons-row">
+            <div class="button">
+                <button type="submit" id="send">Send</button>
+            </div>
+            <div class="button">
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+    <script src="app.js"></script>
+    <!-- Enviar form de HTML A LOCALSTORAGE -->
+    <!-- <script>
+        let sendButton = document.getElementById('send');
+        let resetButton = document.getElementById('reset');
+        let form = document.getElementById('form');
+
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        })
+
+        resetButton.addEventListener('click', function () {
+            let name = document.getElementById('name');
+            let email = document.getElementById('email');
+            let message = document.getElementById('message');
+
+            name.value = '';
+            email.value = '';
+            message.value = '';
+        })
+
+        sendButton.addEventListener('click', function () {
+            let name = document.getElementById('name');
+            let email = document.getElementById('email');
+            let message = document.getElementById('message');
+
+            name = name.value;
+            localStorage.setItem('name', name);
+
+            email = email.value;
+            localStorage.setItem('email', email);
+
+            message = message.value;
+            localStorage.setItem('message', message);
+
+
+
+            
+        })
+    </script> -->
+
+    
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="icon" href="../img/icono.png">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../js/bootstrap.js">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center h-50 bg-info">
+            <div class="text-center">
+                <h1>Albúmina</h1>
+                <div class="container">
+                    <ul>
+                        <a href="../html/inisesion.html">Login</a>
+                        </ol>
+                    </ul>
+
+                </div>
+                <form id="register" style="border:1px solid black;padding:1rem;">
+                    <div class="formField" id="rol">Funci&oacute;n
+                        <input id="lector" type="radio" name="tsselectiom">
+                        <label for="lector">Lector</label>
+                        <input id="editor" type="radio" name="tsselectiom">
+                        <label for="editor">Editor</label>
+                        <br>
+                        <br>
+
+                        <label>Nombre</label>
+                        <input id="name" type="text" placeholder="Nombre" value="" required>
+                        <br>
+                        <br>
+                        <label>Apellido</label>
+                        <input id="apellido" type="text" placeholder="Apellido" value="" required>
+                        <br>
+                        <br>
+                        <label>Coreo</label>
+                        <input id="correo" type="email" placeholder="Correo" value="" required>
+                        <br>
+                        <br>
+                        <label>Usuario</label>
+                        <input id="username" type="text" placeholder="Usuario" value="" required>
+                        <br>
+                        <br>
+                        <label>Contraseña</label>
+                        <input id="contraseña" type="text" placeholder="********" value="" required>
+                        <br>
+                        <br>
+                        <input id="signup_btn" type="submit" value="Registrarse">
+                </form>
+            </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $("#register").submit(function () {
+                        var lector = $("#lector").val();
+                        var editor = $("#editor").val();
+                        var nombre = $("#name").val();
+                        var apellido = $("#apellido").val();
+                        var correo = $("#correo").val();
+                        var username = $("#username").val();
+                        var contraseña = $("#contraseña").val();
+
+                        localStorage.setItem("lector", lector);
+                        localStorage.setItem("editor", editor);
+                        localStorage.setItem("nombre", nombre);
+                        localStorage.setItem("apellido", apellido);
+                        localStorage.setItem("correo", correo);
+                        localStorage.setItem("usuario", username);
+                        localStorage.setItem("contraseña", contraseña);
+
+                    });
+                });
+            </script>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <table class="table" id="table">
+            <thead class="table-dark">
+                <tr>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Correo Electrónico</td>
+                    <td>Usuario</td>
+                    <td>Contraseña</td>
+                    <td>Rol</td>
+                    <td>Editar</td>
+                    <td>Eliminar</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <buttom class="btn btn-success"><i class="bi bi-pencil-square p-1"></i>Editar
+                        </buttom>
+                    </td>
+                    <td>
+                        <buttom class="btn btn-danger"><i class="bi bi-trash-fill p-1"></i>Eliminar</buttom>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
